@@ -1,5 +1,5 @@
 " syntax highlighting
-:syntax on
+ syntax on
 
 " autocommand executed every time a file type is determined
 " formatting options: autowrap text(t), autowrap comments(c), allow gq to format things(q), do not break long lines in insert mode(l)
@@ -8,29 +8,32 @@
 	\ nocindent comments&
 
 " sets automatic indentation (indent each line the same as preceding one) and autowriting (write files when needed)
-:set autoindent
-:set autowrite
+set autoindent
+set autowrite
 
 " Indentation size set to 4
 ":set shiftwidth=4
 
 "filetype detection logic
-:filetype on
+filetype on
 
 " Highlight search results
-:set hlsearch
+set hlsearch
 
 "Show matching brackets
-:set showmatch
+set showmatch
 
 " Set line numbers
-:set number
+set number
 
 " Vim colors for dark background
 set background=dark
 
 " Show (partial command in status line.
 set showcmd
+
+" Shows what mode VIM is in
+set showmode 
 
 " Incremental search
 set incsearch
@@ -47,6 +50,16 @@ set hidden
 " Indent depending on file type
 filetype indent on
 
+" Tab widths
+set shiftwidth=4
+set tabstop=4
+set expandtab
+
+" Highlight cursor line under cursror
+set cursorline
+
+" Highlight cursor line underneath cursor vertically
+set cursorcolumn
 
 autocmd FileType *.c,*.cpp set cindent		" c indent
 autocmd FileType *.py      set nocindent	" no c indent for python	
